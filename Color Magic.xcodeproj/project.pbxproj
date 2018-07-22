@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8503B02021049CF00004C84A /* ColorPresenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503B01F21049CF00004C84A /* ColorPresenterVC.swift */; };
 		8503B02221049D4C0004C84A /* ColorPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503B02121049D4C0004C84A /* ColorPickerVC.swift */; };
+		8503B02421049FD90004C84A /* ColorTransferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503B02321049FD90004C84A /* ColorTransferDelegate.swift */; };
 		85AD96D52103EE4A0027A592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AD96D42103EE4A0027A592 /* AppDelegate.swift */; };
 		85AD96DA2103EE4A0027A592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85AD96D82103EE4A0027A592 /* Main.storyboard */; };
 		85AD96DC2103EE4B0027A592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85AD96DB2103EE4B0027A592 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		8503B01F21049CF00004C84A /* ColorPresenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPresenterVC.swift; sourceTree = "<group>"; };
 		8503B02121049D4C0004C84A /* ColorPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerVC.swift; sourceTree = "<group>"; };
+		8503B02321049FD90004C84A /* ColorTransferDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTransferDelegate.swift; sourceTree = "<group>"; };
 		85AD96D12103EE4A0027A592 /* Color Magic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Magic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AD96D42103EE4A0027A592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85AD96D92103EE4A0027A592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				85AD96E02103EE4B0027A592 /* Info.plist */,
 				8503B01F21049CF00004C84A /* ColorPresenterVC.swift */,
 				8503B02121049D4C0004C84A /* ColorPickerVC.swift */,
+				8503B02321049FD90004C84A /* ColorTransferDelegate.swift */,
 			);
 			path = "Color Magic";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85AD96D52103EE4A0027A592 /* AppDelegate.swift in Sources */,
+				8503B02421049FD90004C84A /* ColorTransferDelegate.swift in Sources */,
 				8503B02021049CF00004C84A /* ColorPresenterVC.swift in Sources */,
 				8503B02221049D4C0004C84A /* ColorPickerVC.swift in Sources */,
 			);

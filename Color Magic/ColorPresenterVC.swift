@@ -8,17 +8,25 @@
 
 import UIKit
 
-class ColorPresenterVC: UIViewController {
-
+class ColorPresenterVC: UIViewController, ColorTransferDelegate {
+    @IBOutlet weak var colorNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func userDidChoose(color: UIColor, withName colorName: String) {
+        print("User choose color")
+        view.backgroundColor = color
+        colorNameLabel.text = colorName
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "presentColorPickerVC" {
+            guard let colorPickerVC = segue.destination as? ColorPickerVC else {
+                return
+            }
+            colorPickerVC.delegate = self
+        }
+    }
 }
