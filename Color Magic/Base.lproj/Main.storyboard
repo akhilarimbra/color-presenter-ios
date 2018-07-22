@@ -1,24 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1dm-FB-mJv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Color Magic-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ColorPresenterVC" customModule="Color_Magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grey is boring choose a Color" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pg-hp-hpd">
+                                <rect key="frame" x="30" y="313.5" width="315" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="U5y-gk-zTA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Pg-hp-hpd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9bD-t3-jry"/>
+                            <constraint firstItem="4Pg-hp-hpd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ymH-7e-DjJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Color Magic" id="2ph-Nk-Dz5" customClass="Colo">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="2ay-vn-YKP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="T7B-4D-R5d">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="ACq-ah-B4A" kind="show" id="66q-hl-fek"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Color PickerVC-->
+        <scene sceneID="JFI-oa-luE">
+            <objects>
+                <viewController id="ACq-ah-B4A" customClass="ColorPickerVC" customModule="Color_Magic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8pC-oD-3dC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dwL-oh-8u7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZf-Pl-lRj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
+                                        <state key="normal" title="Green">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKe-vg-7GC">
+                                        <rect key="frame" x="0.0" y="120.5" width="375" height="120.5"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
+                                        <state key="normal" title="Yellow">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1m-vd-g5k">
+                                        <rect key="frame" x="0.0" y="241" width="375" height="121"/>
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
+                                        <state key="normal" title="Blue">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2n4-GR-Vvh">
+                                        <rect key="frame" x="0.0" y="362" width="375" height="120.5"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
+                                        <state key="normal" title="Red">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KK2-cQ-5xY">
+                                        <rect key="frame" x="0.0" y="482.5" width="375" height="120.5"/>
+                                        <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
+                                        <state key="normal" title="Purple">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GZf-Pl-lRj" firstAttribute="leading" secondItem="dwL-oh-8u7" secondAttribute="leading" id="AxJ-nH-Eg2"/>
+                                    <constraint firstAttribute="trailing" secondItem="oKe-vg-7GC" secondAttribute="trailing" id="P3X-bf-2sW"/>
+                                    <constraint firstItem="KK2-cQ-5xY" firstAttribute="leading" secondItem="dwL-oh-8u7" secondAttribute="leading" id="QLz-Xl-ZT3"/>
+                                    <constraint firstItem="oKe-vg-7GC" firstAttribute="leading" secondItem="dwL-oh-8u7" secondAttribute="leading" id="TKW-LF-Rau"/>
+                                    <constraint firstItem="C1m-vd-g5k" firstAttribute="leading" secondItem="dwL-oh-8u7" secondAttribute="leading" id="YBQ-gC-ukl"/>
+                                    <constraint firstItem="2n4-GR-Vvh" firstAttribute="top" secondItem="C1m-vd-g5k" secondAttribute="bottom" id="baw-M0-vrP"/>
+                                    <constraint firstItem="C1m-vd-g5k" firstAttribute="top" secondItem="oKe-vg-7GC" secondAttribute="bottom" id="d5E-AX-29I"/>
+                                    <constraint firstAttribute="trailing" secondItem="C1m-vd-g5k" secondAttribute="trailing" id="e5n-mg-tsV"/>
+                                    <constraint firstAttribute="trailing" secondItem="GZf-Pl-lRj" secondAttribute="trailing" id="eO0-IM-qzg"/>
+                                    <constraint firstAttribute="trailing" secondItem="2n4-GR-Vvh" secondAttribute="trailing" id="fVB-dM-EqT"/>
+                                    <constraint firstItem="2n4-GR-Vvh" firstAttribute="leading" secondItem="dwL-oh-8u7" secondAttribute="leading" id="gHR-Xh-QUL"/>
+                                    <constraint firstItem="GZf-Pl-lRj" firstAttribute="top" secondItem="dwL-oh-8u7" secondAttribute="top" id="hvo-wn-EMH"/>
+                                    <constraint firstItem="oKe-vg-7GC" firstAttribute="top" secondItem="GZf-Pl-lRj" secondAttribute="bottom" id="iFG-vL-IRc"/>
+                                    <constraint firstAttribute="trailing" secondItem="KK2-cQ-5xY" secondAttribute="trailing" id="mzb-8o-doQ"/>
+                                    <constraint firstItem="KK2-cQ-5xY" firstAttribute="top" secondItem="2n4-GR-Vvh" secondAttribute="bottom" id="qgK-nK-Lsk"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f0X-nH-n2j" firstAttribute="bottom" secondItem="dwL-oh-8u7" secondAttribute="bottom" id="1ul-aN-KDq"/>
+                            <constraint firstItem="dwL-oh-8u7" firstAttribute="top" secondItem="f0X-nH-n2j" secondAttribute="top" id="9Un-z5-Pea"/>
+                            <constraint firstItem="dwL-oh-8u7" firstAttribute="leading" secondItem="f0X-nH-n2j" secondAttribute="leading" id="PBR-Zk-9GQ"/>
+                            <constraint firstItem="dwL-oh-8u7" firstAttribute="trailing" secondItem="f0X-nH-n2j" secondAttribute="trailing" id="VKp-f4-YOz"/>
+                            <constraint firstItem="dwL-oh-8u7" firstAttribute="top" secondItem="f0X-nH-n2j" secondAttribute="top" id="dXi-EW-vEP"/>
+                            <constraint firstItem="dwL-oh-8u7" firstAttribute="leading" secondItem="f0X-nH-n2j" secondAttribute="leading" id="hJR-fQ-SP7"/>
+                            <constraint firstItem="dwL-oh-8u7" firstAttribute="trailing" secondItem="f0X-nH-n2j" secondAttribute="trailing" id="qaw-IO-ptW"/>
+                            <constraint firstItem="dwL-oh-8u7" firstAttribute="top" secondItem="f0X-nH-n2j" secondAttribute="top" id="sDV-q3-tmc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f0X-nH-n2j"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXG-6h-hKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1990" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MPq-Mn-cq9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1dm-FB-mJv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="JTi-1l-rNQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="a7x-Jb-1bb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycL-7d-Y5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="134"/>
         </scene>
     </scenes>
 </document>
